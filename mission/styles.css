@@ -47,3 +47,12 @@ img {
     margin: 0 auto;
     margin-top: 50px;
 }
+
+.dark {
+    background-color: #333;
+    color: white;
+}
+
+.dark h3 {
+    color: #67a4cd;
+}
