@@ -26,6 +26,18 @@
 
 }
 
+@media (max-width: 600px) {
+    .menu {
+        display: none;
+    }
+}
+
+
+.hide {
+    display: none;
+}
+
+
 body {
     font-family: var(--primary-font);
     font-size: 1.2em;
