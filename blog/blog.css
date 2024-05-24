@@ -1,0 +1,41 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #473144;
+}
+
+h1 {
+    font-family:Lora, Impact, serif;
+}
+
+h2 {
+    color: #AF1B3F;
+}
+
+a {
+    color:#AF1B3F;
+    text-decoration: none;
+}
+
+nav a:visited {
+    color:#AF1B3F;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: end;
+    justify-items: end;
+    list-style-type: none;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
+article .booktwo {
+    margin-top: 25%;
+}
+
