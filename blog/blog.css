@@ -4,7 +4,8 @@ body {
 }
 
 h1 {
-    font-family:Lora, Impact, serif;
+    font-family: Lora, Impact, serif;
+    text-align: center;
 }
 
 h2 {
@@ -12,30 +13,96 @@ h2 {
 }
 
 a {
-    color:#AF1B3F;
+    color: #AF1B3F;
     text-decoration: none;
+    font-size: 20px;
 }
 
 nav a:visited {
-    color:#AF1B3F;
+    color: #AF1B3F;
 }
 
 ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 100px 100px 100px;
     justify-content: end;
-    justify-items: end;
     list-style-type: none;
+    padding: 0;
+    text-align: right;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-top: solid #EFC69B;
+    border-bottom: solid #EFC69B;
 }
+
+li {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
 
 main {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
-
-
-article .booktwo {
-    margin-top: 25%;
+article {
+    justify-content: center;
+    justify-items: center;
+    grid-column: 1/2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
 }
 
+.ratingone {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 150px;
+    text-align: end;
+    padding-right: 20%;
+}
+
+.reviewone {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 400px;
+    height: 500px;
+    border-left: solid #EFC69B;
+    padding-left: 3%;
+}
+
+.ratingtwo {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 200px;
+    text-align: end;
+    padding-right: 20%;
+}
+
+.reviewtwo {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 100%;
+    border-left: solid #EFC69B;
+    padding-left: 3%;
+}
+
+aside {
+    grid-column: 2/3;
+    width: 100%;
+    margin-left: 20%;
+    border: solid #EFC69B;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
