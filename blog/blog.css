@@ -42,7 +42,19 @@ li {
     padding-right: 15px;
 }
 
+.skiptocontent a {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: yellow;
+    color: black;
+    padding: 10px;
+    z-index: 100;
+}
 
+.akiptocontent a:focus {
+    left: 0;
+}
 
 main {
     position: absolute;
