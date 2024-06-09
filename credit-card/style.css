@@ -1,0 +1,143 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400, 700,300);
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    background-color: #dddedd;
+    width: 390px;
+    height: 250px;
+    border-radius: 6px;
+    padding: 20px 30px 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: black;
+}
+
+body {
+    font-family: lato, 'helvectica-light';
+    text-transform: uppercase;
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin: 3%;
+}
+
+.card-back {
+    grid-column: 2/5;
+    top: 100px;
+    right: 990px;
+    z-index: -2;
+    font-size: 15px;
+    display: grid;
+    padding-right: 0px;
+    margin-left: 0px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.card-reader {
+    background-color: #444444;
+    height: 40px;
+    grid-row: 1/1;
+    grid-column: 3/3;
+    width: 150px;
+    padding: 0;
+    margin: 0px;
+}
+
+.card-front {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    margin-right: 0px;
+    grid-column: 1/4;
+    padding: 1% 1% 1% 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 30px 30px 30px 30px 30px;
+    box-shadow: 5px 5px #cacaca;
+}
+
+p {
+    grid-column: 1/3;
+    grid-row: 2/2;
+}
+
+.card-image {
+    grid-row: 1/2;
+    grid-column: 5/6;
+}
+
+.card-number {
+    grid-row: 3/3;
+
+}
+
+#card-number {
+    grid-row: 4/4;
+    grid-column: 1/6;
+}
+
+.card-holder {
+    grid-row: 5/5;
+}
+
+#card-holder {
+    grid-row: 6/6;
+    height: 25px;
+}
+
+.exp-date {
+    grid-row: 5/5;
+    grid-column: 4/4;
+    margin-left: 20px;
+}
+
+#exp-date {
+    grid-row: 6/6;
+    grid-column: 4/4;
+    margin-left: 20px;
+    height: 25px;
+    width: 40px;
+}
+
+#exp-date-year {
+    grid-row: 6/6;
+    grid-column: 5/5;
+    height: 25px;
+    width: 40px;
+    padding: 0;
+    margin-left: -40px;
+}
+
+.cvv {
+    grid-column: 3/3;
+    grid-row: 4/4;
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+#cvv {
+    height: 25px;
+    width: 75px;
+    grid-column: 3/4;
+    grid-row: 4/4;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+.submit {
+    grid-column: 4/4;
+    grid-row: 4/4;
+}
