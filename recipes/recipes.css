@@ -9,6 +9,10 @@
     --secondary-font: "Oswald";
 }
 
+li {
+    list-style-type: none;
+}
+
 h2 {
     font-family: "Amatic SC", cursive;
     text-align: center;
@@ -79,7 +83,7 @@ main {
     text-align: center;
 }
 
-.recipe-card {
+.recipe {
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 10px;
@@ -108,7 +112,7 @@ h3 {
     margin: 10px 0;
 }
 
-.rating {
+.recipe_rating {
     display: block;
     margin-top: 10px;
 }
@@ -130,7 +134,7 @@ footer .social img {
     height: 30px;
 }
 
-.description {
+.recipe_description {
     display: none;
 }
 
@@ -176,7 +180,7 @@ footer .social img {
         justify-content: center;
     }
 
-    .recipe-card {
+    .recipe {
         width: 80%;
         display: flex;
         align-items: center;
@@ -185,7 +189,7 @@ footer .social img {
         border: 1px solid #ccc;
         gap: 10px;
     }
-    .recipe-card img {
+    .recipe img {
         width: 45%;
     }
     .info {
@@ -202,7 +206,7 @@ footer .social img {
         border-radius: 5px;
     }
 
-    .description {
+    .recipe_description {
         display: block;
         text-align: left;
     }
