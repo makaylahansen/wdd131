@@ -81,6 +81,8 @@ header {
 main {
     padding: 20px;
     text-align: center;
+    justify-content: center;
+    justify-items: center;
 }
 
 .recipe {
@@ -105,11 +107,12 @@ main {
     text-transform: uppercase;
 }
 
-h3 {
+.name {
     font-family: "Amatic SC", cursive;
     color: var(--primary-color);
-    font-size: 1.5em;
+    font-size: 20px;
     margin: 10px 0;
+    text-decoration: none;
 }
 
 .recipe_rating {

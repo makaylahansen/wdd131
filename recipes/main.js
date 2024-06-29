@@ -17,7 +17,7 @@ function recipeTemplate(recipe) {
             <ul class="recipe__tags">
                 ${tagsTemplate(recipe.tags)}
             </ul>
-            <h2><a href="#">${recipe.name}</a></h2>
+            <h2><a class="name" href="#">${recipe.name}</a></h2>
             <p class="recipe__ratings">
                 ${ratingTemplate(recipe.rating)}
             </p>
@@ -58,32 +58,31 @@ function renderRecipes(recipeList) {
 }
 
 function filter(query) {
-    // Filter function to check if query matches recipe name, description, tags, or ingredients
-    const filtered = recipes.filter(recipe =>
-        recipe.name.toLowerCase().includes(query) ||
-        recipe.description.toLowerCase().includes(query) ||
-        recipe.tags.some(tag => tag.toLowerCase().includes(query)) ||
-        recipe.ingredients.some(ingredient => ingredient.toLowerCase().includes(query))
-    );
+    const lowercaseQuery = query.toLowerCase();
 
-    // Sort filtered recipes alphabetically by name
-    const sorted = filtered.sort((a, b) => a.name.localeCompare(b.name));
+    const filtered = recipes.filter(recipe => {
+        const nameMatch = recipe.name.toLowerCase().includes(lowercaseQuery);
+        
+        const tagMatch = recipe.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery));
+
+        return nameMatch || tagMatch;
+    });
+    const sorted = filtered.sort((a, b) => {
+        return a.name.localeCompare(b.name);
+    });
 
     return sorted;
 }
 
 
 
-function searchHandler(e) {
-    e.preventDefault(); // Prevent form submission and page reload
 
-    // Get the search input value and convert it to lowercase
+function searchHandler(e) {
+    e.preventDefault();
     const query = document.getElementById('searchInput').value.toLowerCase();
 
-    // Filter recipes based on the query
     const filteredRecipes = filter(query);
 
-    // Render the filtered recipes
     renderRecipes(filteredRecipes);
 }
 
