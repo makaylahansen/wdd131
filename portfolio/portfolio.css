@@ -167,11 +167,10 @@ img {
     color: white;
 }
 
-.dark h3 {
-    color: white;
-}
-
-.dark h1 {
+.dark h3,
+.dark h2,
+.dark h1,
+.dark li {
     color: white;
 }
 
@@ -189,9 +188,46 @@ img {
     color:#333
 }
 
+.dark table {
+    background-color: #333;
+    color: white;
+}
+
+.dark h2 {
+    border-bottom: 2px solid #DCE2BD;
+}
+
 #theme {
     margin: 3%;
     align-self: baseline;
     background-color: #333;
     color: white;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.wordle {
+    grid-column: 1/2;
+}
+
+.meal_prep {
+    grid-column: 2/3;
+}
+
+.bash {
+    grid-column: 3/4;
+}
+
+@media (max-width: 6000px) {
+  
+    section {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
 }
