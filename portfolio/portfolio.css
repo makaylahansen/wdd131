@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 html {
     background-color: #DCE2BD;
     margin: 5%;
@@ -13,7 +14,6 @@ body {
     justify-content: center;
     background-color: white;
     width: 1200px;
-    display: flex;
     flex-direction: column;
     align-items: center;
     font-family: Lato, sans-serif;
@@ -32,6 +32,10 @@ main {
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
+}
+
+.main_image {
+    width: 250px;
 }
 
 li {
@@ -53,22 +57,22 @@ a {
     width: 200px;
     text-align: center;
     margin: 5px;
-    line-height: 25px; /* Adjusted to center text vertically */
+    line-height: 25px; 
 }
 
-.intro h1{
+.intro h1 {
     text-align: center;
     width: 100%;
     font-family: "Maven Pro";
     font-size: 35px;
-    color:#002645;
+    color: #002645;
 }
 
 nav {
     margin-bottom: 3%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Allows wrapping if there are many links */
+    flex-wrap: wrap; 
 }
 
 nav a {
@@ -81,7 +85,7 @@ nav a {
     width: 200px;
     text-align: center;
     margin: 5px;
-    line-height: 25px; /* Adjusted to center text vertically */
+    line-height: 25px;
 }
 
 .link {
@@ -148,6 +152,29 @@ ul li {
     margin-bottom: 5px;
 }
 
+.linkedin {
+    font-family: Lato, sans-serif;
+    background-color: white;
+    font-size: 20px;
+    color: #555;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 20px 0;
+    width: 90%;
+}
+
+
+footer {
+    margin: 5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 td:first-child {
     width: 60%;
 }
@@ -155,11 +182,6 @@ td:first-child {
 td:last-child {
     width: 40%;
     padding-left: 20px;
-}
-
-
-img {
-    width: 250px;
 }
 
 .dark {
@@ -174,7 +196,8 @@ img {
     color: white;
 }
 
-.dark main {
+.dark main,
+.dark .linkedin {
     background-color: #333;
     color: white;
 }
@@ -185,7 +208,7 @@ img {
 
 .dark a {
     background-color: #DCE2BD;
-    color:#333
+    color: #333;
 }
 
 .dark table {
@@ -204,30 +227,150 @@ img {
     color: white;
 }
 
+#wordle_img,
+#meal_prep_img,
+#bash_img {
+    width: 350px;
+}
+
 .project {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.wordle {
-    grid-column: 1/2;
+.project div {
+    flex: 1;
+    margin: 10px;
 }
 
-.meal_prep {
-    grid-column: 2/3;
+.wordle, .meal_prep, .bash {
+    text-align: center;
 }
 
-.bash {
-    grid-column: 3/4;
+
+.viewer, .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
 }
 
-@media (max-width: 6000px) {
-  
-    section {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
+.overlay {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.viewer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.viewer img {
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+
+@media (max-width: 1200px) {
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 5%;
+    }
+
+    header, main {
+        padding: 10px;
         width: 100%;
     }
 
+    .project {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 800px) {
+    td {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    tr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project div {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        margin: 0;
+    }
+
+    body {
+        margin: 0;
+        padding: 5%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    header, main {
+        padding: 10px;
+    }
+
+    .intro h1 {
+        font-size: 28px;
+    }
+
+    .project div {
+        width: 100%;
+    }
 }
