@@ -347,6 +347,12 @@ td:last-child {
         margin: 0;
     }
 
+    #wordle_img,
+    #meal_prep_img,
+    #linux{
+        width: 200px;
+    }
+
     body {
         margin: 0;
         padding: 5%;
