@@ -6,10 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const selectedValue = this.value;
         if (selectedValue == 'Dark') {
             document.body.classList.add('dark');
-            imageElement.src = 'logo-white.png';
         } else {
             document.body.classList.remove('dark');
-            imageElement.src = 'logo.png';
         }
     });
 
@@ -26,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const imageMapping = {
         "wordle_img": "proimg/r_wordle.png",
         "meal_prep_img": "proimg/r_meal_prep.png",
-        "bash_img": "proimg/r_bash.png"
+        "linux": "proimg/r_linux.png"
     };
 
     // View handler function
