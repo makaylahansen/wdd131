@@ -227,6 +227,19 @@ td:last-child {
     color: white;
 }
 
+.alginment,
+.visually-hidden {
+    align-self: baseline;
+}
+
+.visually-hidden {
+    color: white;
+}
+
+.dark .visually-hidden {
+    color:#333;
+}
+
 #wordle_img,
 #meal_prep_img,
 #linux {
