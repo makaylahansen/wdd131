@@ -23,6 +23,6 @@ const fun_terms = [
         term: 'JavaScript',
         definition: 'JavaScript is what makes a website fun and dynamic! It is a coding language that allows for user interaction. This website uses Javascript in 3 ways. This section is made with JavaScript! Clicking on the projects to see the output was also done with JavaScript, as well as choosing between the Light or Dark theme.'
     }
-];
+]
 
-export default fun_terms;
+export default fun_terms

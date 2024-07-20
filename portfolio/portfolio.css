@@ -290,6 +290,17 @@ td:last-child {
     z-index: 1001;
 }
 
+.terms {
+    background-color: #DCE2BD;
+    padding: 2%;
+    border-radius: 5px;
+}
+
+.dark .terms h2,
+.dark .terns h3,
+.dark .terms p {
+    color:#333;
+}
 
 @media (max-width: 1200px) {
     body {
